@@ -66,7 +66,7 @@ void executeCommand(char * tokens[]) {
 
 	if(!(pid = fork())) {
 		execvp(filePath, tokens);
-		exit(10); 			
+		exit(0); 			
 	}
 
 	waitpid(pid,&status,WUNTRACED);
