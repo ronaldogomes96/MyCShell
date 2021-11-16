@@ -29,7 +29,7 @@ int readNewInstruction() {
 	unsigned long commandLenght = strlen(buffer);
 
 	if (commandLenght != 0) {
-		char * tokens[MAX_NUMBER_OF_TOKENS];
+		char * tokens[MAX_NUMBER_OF_TOKENS] = { "" };
 		int numberOfTokens = 0;
 		extractTokens(buffer, &numberOfTokens, tokens);
 		executeCommand(tokens);
